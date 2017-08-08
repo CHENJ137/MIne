@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Jian Chen</title>
+</head>
+
+<body>
+   <h1>Jason</h1>
+   <p>My first paragraph</p>
+   <button type="button" onclick="myAction()">Enter</button>
+	<p id="myDisplay"></p><br/>
+	<script>
+	function myAction() 
+	{
+		document.getElementById("myDisplay").innerHTML= 'Hello' ;	
+	}
+	</script>	
+</body>
+</html>
+Name: <input id="username" type="text"> <br/>
+
+Age: <input id="age" type="number"><br/>
+
+<button type="button" onclick="myAction2()">Enter</button>
+
+<p id="myDisplay2"></p><br/>
+
+<script>
+function myDisplay ()
+	{
+		var mytext;
+		var myage; // Get the value of the input field with id="username"
+		mytext = document.getElementById("username").value; // Get the value of the input field with id="age"
+		myage = document.getElementById("age").value;
+		document.getElementById("myDisplay").innerHTML= ‘ Hello’ + mytext + ‘Your age is ‘ + myage;
+	} 
+</script>
+    <div><br/><br/>
+	<div id="d1" style="background-color: lightgreen; width: 300px;">	<br/><br/>
+	<input type="radio" name="myColor"  checked id="myRed" onclick="myColour()"> Red<br>
+	<input type="radio" name="myColor"  id="myBlue" onclick="myColour()"> Blue<br>
+    <script>
+	function myColour() 
+	{
+		if (document.getElementById("myRed").checked)
+		{
+			document.getElementById("d1").style.backgroundColor = "red"; // alert(' It is a red colour.');
+		}
+		else 
+		{
+			document.getElementById("d1").style.backgroundColor  = "blue"; // alert(' It is a blue colour.');
+		}
+	}
+    </script>
+</div>	
