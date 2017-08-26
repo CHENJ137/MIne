@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="test_list.css"?>
+<MCtest>
+	<test>
+		<Number1>1</Number1>
+		<Number2>1</Number2>
+		<Number3>1</Number3>
+		<selectValue>month</selectValue>		
+		<ExpectedResult>Your mortgage payment will be $2.00.</ExpectedResult>	
+		<textMessage>as user put 2 Plus 34 as we expect 36</textMessage>
+	</test>	
+	
+</MCtest>

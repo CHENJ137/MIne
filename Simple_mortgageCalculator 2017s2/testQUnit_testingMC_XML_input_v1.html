@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mortgage Calculator - QUnit</title>
+  <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-1.23.1.css">
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="https://code.jquery.com/qunit/qunit-1.23.1.js"></script>
+  <script language="javascript" src="mortgage_calculator.js" type="text/javascript"></script>
+    <script> 
+	if (window.XMLHttpRequest)
+		  {// code for IE7+, Firefox, Chrome, Opera, Safari
+		  xmlhttp=new XMLHttpRequest();
+		  }
+		else
+		  {// code for IE6, IE5
+		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		  }
+		xmlhttp.open("GET","testsMC_list.xml",false);
+		xmlhttp.send();
+		xmlDoc=xmlhttp.responseXML; 
+		
+		var c=xmlDoc.getElementsByTagName('test');	
+		
+		QUnit.test('simple Calculator test', function (assert) {
+		for (i=0; i<c.length; i++)
+		  { if (document.getElementsByTagName('selectValue') == 'monthly')
+		   
+			assert.strictEqual( myPaymentCalculate( Number(c[i].getElementsByTagName('Number1')[0].childNodes[0].nodeValue), 
+			Number(c[i].getElementsByTagName('Number2')[0]*12.childNodes[0].nodeValue), Number(c[i].getElementsByTagName('Number3')[0].childNodes[0].nodeValue)),
+			c[i].getElementsByTagName('ExpectedResult')[0].childNodes[0].nodeValue,
+			c[i].getElementsByTagName('textMessage')[0].childNodes[0].nodeValue );
+		  }
+		} );  
+		
+
+</script>
+</body>
+</html>

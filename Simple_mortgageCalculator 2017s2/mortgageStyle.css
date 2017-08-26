@@ -1,0 +1,30 @@
+/* CSS - Simple Mortgage Payment Calculator */
+body
+{
+font-family: Georgia; 
+font-size: 14px;
+}
+.simp-div {
+background-color: lightblue;
+border: 2px solid #344F2B;
+padding:15px;
+width: 459px;
+}
+
+.simp-error {
+font-family: Georgia, Arial, Helvetica, sans-serif;
+font-size: 12px;
+color: #990000;
+}
+
+.simp-monthlypayment {
+margin-top: 15px;
+font-size: 24px;
+color: #990000;
+}
+
+.simp-friendlyreminder {
+display: none;
+}
+
+/* CSS - Simple Mortgage Payment Calculator */
